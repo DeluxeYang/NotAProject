@@ -1,3 +1,4 @@
+import os
 import numpy
 import operator
 
@@ -75,8 +76,35 @@ def img_to_vector(filename):
     return return_vec
 
 
+def handwriting_class_test():
+    hw_labels = []
+    training_file_list = os.listdir('trainingDigits')  # load the training set
+    m = len(training_file_list)
+    training_matrix = numpy.zeros((m, 1024))
+    for i in range(m):
+        file_name_str = training_file_list[i]
+        file_name = file_name_str.split('.')[0]
+        class_num_str = int(file_name.split('_')[0])
+        hw_labels.append(class_num_str)
+        training_matrix[i, :] = img_to_vector('trainingDigits/%s' % file_name_str)
+    test_file_list = os.listdir('testDigits')   # iterate through the test set
+    error_count = 0.0
+    m_test = len(test_file_list)
+    for i in range(m_test):
+        file_name_str = test_file_list[i]
+        file_name = file_name_str.split('.')[0]   # take off .txt
+        class_num_str = int(file_name.split('_')[0])
+        vector_under_test = img_to_vector('testDigits/%s' % file_name_str)
+        classifier_result = classify_knn(vector_under_test, training_matrix, hw_labels, 3)
+        print("the classifier came back with: %d, the real answer is: %d" % (classifier_result, class_num_str))
+        if classifier_result != class_num_str:
+            error_count += 1.0
+    print("\n the total number of errors is: %d" % error_count)
+    print("\n the total error rate is: %f" % (error_count/float(m_test)))
+
+
 if __name__ == '__main__':
-    print(img_to_vector("trainingDigits/0_0.txt"))
+    handwriting_class_test()
     # group, labels = create_data_set()
     # print(classify_knn([1, 1], group, labels, 2))
     # dating_matrix, dating_label = file_to_matrix("datingTestSet2.txt")
