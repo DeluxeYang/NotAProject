@@ -14,26 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kNN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification/KNN/kNN.py">
+      <file leaf-file-name="Bayes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classification/Bayes/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2266">
-              <caret line="105" selection-start-line="105" selection-end-line="105" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ID3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Classification/ID3/ID3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="117" column="57" lean-forward="true" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -60,6 +45,7 @@
         <option value="$PROJECT_DIR$/Classification/KNN/kNN.py" />
         <option value="$PROJECT_DIR$/Classification/ID3/Tree_Plotter.py" />
         <option value="$PROJECT_DIR$/Classification/ID3/ID3.py" />
+        <option value="$PROJECT_DIR$/Classification/Bayes/Bayes.py" />
       </list>
     </option>
   </component>
@@ -80,7 +66,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,12 +82,19 @@
               <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
               <item name="Classification" type="462c0819:PsiDirectoryNode" />
-              <item name="ID3" type="462c0819:PsiDirectoryNode" />
+              <item name="Bayes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
+              <item name="Classification" type="462c0819:PsiDirectoryNode" />
+              <item name="KNN" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,7 +120,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ID3">
+  <component name="RunManager" selected="Python.Bayes">
+    <configuration name="Bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MachineLearningInAction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Classification/Bayes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classification/Bayes/Bayes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="ID3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MachineLearningInAction" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,9 +220,11 @@
       <item itemvalue="Python.kNN" />
       <item itemvalue="Python.ID3" />
       <item itemvalue="Python.Tree_Plotter" />
+      <item itemvalue="Python.Bayes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Bayes" />
         <item itemvalue="Python.ID3" />
         <item itemvalue="Python.Tree_Plotter" />
         <item itemvalue="Python.kNN" />
@@ -237,13 +250,13 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="296" height="588" id="Documentation" order="5" side_tool="true" visible="true" weight="0.1323752" />
+      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" side_tool="true" visible="true" weight="0.1323752" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.44884488" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45544556" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46369636" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1505295" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
@@ -266,6 +279,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Classification/KNN/kNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="105" selection-start-line="105" selection-end-line="105" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification/ID3/ID3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2530">
+          <caret line="117" column="57" lean-forward="true" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classification/KNN/kNN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2266">
@@ -337,19 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification/KNN/kNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="105" selection-start-line="105" selection-end-line="105" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classification/ID3/lenses.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification/ID3/Tree_Plotter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -359,11 +379,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification/ID3/ID3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="117" column="57" lean-forward="true" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
+        <state relative-caret-position="512">
+          <caret line="117" column="57" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification/KNN/kNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="105" selection-start-line="105" selection-end-line="105" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda/Lib/site-packages/Cython/Includes/numpy/__init__.pxd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8118">
+          <caret line="369" column="12" selection-start-line="369" selection-start-column="12" selection-end-line="369" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification/Bayes/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
         </state>
       </provider>
     </entry>
