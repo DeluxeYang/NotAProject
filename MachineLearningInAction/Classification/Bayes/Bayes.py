@@ -1,5 +1,6 @@
 import numpy
 import math
+import random
 
 
 def load_data_set():
@@ -71,5 +72,55 @@ def testing_naive_bayes():
     print(test, 'classified as: ', classify_naive_bayes(this_doc, p0_vec, p1_vec, p_ab))
 
 
+def bag_of_words_to_vec_mn(vocab_list, input_set):
+    res = [0]*len(vocab_list)
+    for word in input_set:
+        if word in vocab_list:
+            res[vocab_list.index(word)] += 1
+    return res
+
+
+def text_parse(big_string):  # input is big string, #output is word list
+    import re
+    list_of_tokens = re.split(r'\W*', big_string)
+    return [tok.lower() for tok in list_of_tokens if len(tok) > 2]
+
+
+def spam_test():
+    doc_list = []
+    class_list = []
+    full_text = []
+    for i in range(1, 26):
+        word_list = text_parse(open('email/spam/%d.txt' % i, "r", errors='ignore').read())
+        doc_list.append(word_list)
+        full_text.extend(word_list)
+        class_list.append(1)
+        word_list = text_parse(open('email/ham/%d.txt' % i, "r", errors='ignore').read())
+        doc_list.append(word_list)
+        full_text.extend(word_list)
+        class_list.append(0)
+    vocab_list = create_vocab_list(doc_list)  # create vocabulary
+    training_set = [i for i in range(50)]
+    test_set = []  # create test set
+    for i in range(10):  # 随机抽取10个作为测试样本，并从原list删除
+        rand_index = int(random.uniform(0, len(training_set)))
+        test_set.append(training_set[rand_index])
+        del (training_set[rand_index])
+    train_mat = []
+    train_classes = []
+    for doc_index in training_set:  # train the classifier (get probs) trainNB0
+        train_mat.append(bag_of_words_to_vec_mn(vocab_list, doc_list[doc_index]))
+        train_classes.append(class_list[doc_index])
+    p0_v, p1_v, p_spam = train_naive_bayes_0(numpy.array(train_mat), numpy.array(train_classes))
+    error_count = 0
+    for doc_index in test_set:  # classify the remaining items
+        word_vector = bag_of_words_to_vec_mn(vocab_list, doc_list[doc_index])
+        if classify_naive_bayes(numpy.array(word_vector), p0_v, p1_v, p_spam) != class_list[doc_index]:
+            error_count += 1
+            print("classification error", doc_list[doc_index])
+    print('the error rate is: ', float(error_count) / len(test_set))
+
+
 if __name__ == '__main__':
-    testing_naive_bayes()
+    # testing_naive_bayes()
+    spam_test()
