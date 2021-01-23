@@ -22,6 +22,33 @@ def Partition(L, low, high):#一次划分
     return low
 
 
+def quick_sort(data, low, high):
+    if low < high:
+        index = partition(data, low, high)
+        quick_sort(data, low, index-1)
+        quick_sort(data, index+1, high)
+    return data
+
+
+def partition(data, low, high):
+    index = random.randint(low, high)
+    data[index], data[high] = data[high], data[index]
+    small = low - 1
+    for i in range(low, high):
+        if data[i] < data[high]:
+            small += 1
+            if small != i:
+                data[i], data[small] = data[small], data[i]
+    small += 1
+    data[small], data[high] = data[high], data[small]
+    return small
+
+
+L = range(0,100)
+L = random.sample(L, 10)
+print(quick_sort(L, 0, len(L)-1))
+print(L)
+
 if __name__ == '__main__':
     L = range(0,100)
     L = random.sample(L, 10)
